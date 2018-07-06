@@ -1,0 +1,141 @@
+/* Setting up font type, size, color, opacity etc. of the text and background color for all the page. */
+
+body {
+  font-family: Helvetica;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+
+ /* Header part. Logo and menu styles are here. */
+
+.header {
+  display: flex;
+  height: 69px;
+  border-bottom: 1px solid seashell;
+  width: 100%;
+  margin: auto;
+  justify-content: space-between; /* There are 2 divs (logo and menu) in this div and we are sending them both to different sides of the page */
+  position: fixed; /* fixing header div on top of the page */
+  z-index: 1;
+  background-color: inherit; /* z-index and inherited background color (black) makes other divs move under this one and make header always seen on top */
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.menu {
+  align-self: center;
+  margin-right: 10px;
+}
+
+.menu a {
+  color: seashell;
+  padding: 0 10px;
+}
+
+/* Mission div and the div that includes the text written on the image */
+
+#mission {
+  display: flex;
+  height: 700px;
+  width: 1200px;
+  background-image: url('../images/img-mission-background.jpg');
+  margin-top: 69px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission_text {
+  align-self: center; /* Centering div vertically inside the parent flex div */
+  background-color: black;
+  width: 100%;
+}
+
+.mission_text h2, h3 {
+  padding: 10px;
+  margin: 0px;
+}
+
+/* Teas of the month */
+
+#featured_tea {
+  width: 1000px;
+  margin: auto;
+  padding-top: 70px; /* to be sure that title show on top when the link is clicked on the menu */
+  margin-bottom: 60px;
+}
+
+.teas {
+  display: inline-flex;
+  flex-wrap: wrap; /* Let the divs start a new line if they don't fit in the parent div */
+  justify-content: center; /* Make the divs that go to second line sit in the center of the page */
+}
+
+.tea img {
+  width: 300px;
+  height: 200px;
+  margin: 0px 15px;
+}
+
+.tea h3 {
+  margin: 0 0 25px 0;
+}
+
+/* Locations of the company */
+
+#locations {
+  height: 500px;
+  width: 1200px;
+  background-image: url('../images/img-locations-background.jpg');
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+}
+
+#locations .title {
+  margin-bottom: 15px;
+  padding-bottom: 0;
+}
+
+#locations .title h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.location_list {
+  display: flex;
+  width: 980px; /* (300 x 3) + (40 x 2) To be sure that locations are listed with a gap of 40px between each other */
+  justify-content: space-between; /* Left and right divs are sent to each side of the parent div and remaining space is divided equally on each side of the div in the center */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location {
+  width: 300px;
+  height: auto;
+  opacity: 1;
+  background-color: black;
+  padding: 10px 0;
+}
+
+/* Contact info */
+
+.contact {
+  height: 200px;
+}
+
+/* Copyright etc. */
+
+.footer {
+  text-align: left;
+  padding-left: 20px;
+}
